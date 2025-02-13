@@ -4,10 +4,10 @@ a cute little valentines day project i made.
 This is a desktop application built with Electron.js to create a heartfelt Valentine's experience. The app includes interactive elements, animations, and sound to make the experience even more special. 💕
 
 ## Features
-🎨 Custom UI: Designed with a unique theme to fit the Valentine's vibe. I drew all the sprites and made the animations myself.
-🎶 Sound Effects: The app includes sound elements for an immersive experience.
-💌 Personalized Message: A special message for the recipient.
-💻 Electron-based: Runs as a standalone desktop application on Windows.
+🎨 Custom UI: Designed with a unique theme to fit the Valentine's vibe. I drew all the sprites and made the animations myself.  
+🎶 Sound Effects: The app includes sound elements for an immersive experience.  
+💌 Personalized Message: A special message for the recipient.  
+💻 Electron-based: Runs as a standalone desktop application on Windows.  
 ## Tech Stack
 - Electron.js – for building the desktop app
 - HTML, CSS, JavaScript – for the UI and logic
