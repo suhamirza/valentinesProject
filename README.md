@@ -24,6 +24,6 @@ note: if the app isnt in the start menu, check: C:\Users\<your-username>\AppData
    cd valentines-project
 2. install dependencies: npm install  
 3. Run the app in development mode: npm start
-4. To package the app into an installer: npm run make
+4. To package the app into an installer: npm run make  
    The setup file will be generated inside the out/make folder.
 
