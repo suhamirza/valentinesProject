@@ -16,5 +16,14 @@ This is a desktop application built with Electron.js to create a heartfelt Valen
 1. you may access the Setup.exe file from out/make/squirrel.windows/x64
 2. Download the Setup.exe file.
 3. Run the installer.
-Once installed, the app should opne immediately! you can also search for the app in Start Menu and open it!
-note: if the app isnt in the start menu, check: C:\Users\<your-username>\AppData\Local\valentinesproject   
+Once installed, the app should open immediately! you can also search for the app in Start Menu and open it!
+note: if the app isnt in the start menu, check: C:\Users\<your-username>\AppData\Local\valentinesproject
+## to build app yourself
+1. Clone this repository:
+   git clone https://github.com/yourusername/valentines-project.git  
+   cd valentines-project
+2. install dependencies: npm install  
+3. Run the app in development mode: npm start
+4. To package the app into an installer: npm run make
+   The setup file will be generated inside the out/make folder.
+
