@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>valentines adventure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+    <div id="custom-frame"></div>
+    <div id="custom-titlebar">
+      <div id="myHeading"class="pixelify-sans-font">valentines adventure with keko <3 </div>
+        <div class="controls">
+          <img src="pictures/minimize.png" id="minimize-btn" class="control-btns" alt="Minimize">
+          <img src="pictures/close.png" id="exit-btn" class="control-btns" alt="Close">
+        </div>
+    </div>
+    <div id="main-container">
+      <img id="keko-gift" src="pictures/kekoGift.gif">
+      <audio id="popSound" src="pictures/pop-39222.mp3" preload="auto"></audio>
+      <button class="pixel-btn pixelify-sans-font" id="start-btn" onclick="playSoundAndDo('popSound', navigateToReasons)">start!</button>
+    </div>
+    
+    <script src="renderer.js"></script>
+  </body>
+</html>

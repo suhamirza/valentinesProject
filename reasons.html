@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+    <div id="custom-frame"></div>
+    <div id="custom-titlebar" style="top: 12px;">
+      <div id="myHeading" class="pixelify-sans-font">9 reasons i love you <3 </div>
+        <div class="controls">
+          <img src="pictures/minimize.png" id="minimize-btn" class="control-btns" alt="Minimize">
+          <img src="pictures/close.png" id="exit-btn" class="control-btns" alt="Close">
+        </div>
+    </div>
+    <div id="main-container">
+        <svg width="274" height="274" viewBox="0 0 274 274" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+            <!-- Chocolate Box Background (Replace with your image) -->
+            <g id="chocolate-group" transform="translate(160, -50)">
+            <image id="chocolate-box" href="pictures/chocolateBox.png" width="274" height="274"/>
+          
+            <!-- Clickable Chocolate Areas -->
+            <!-- Row 1 -->
+            <rect x="51" y="102" width="28" height="28" fill="transparent" onclick="showReason(1)" role="button" tabindex="0" aria-label="Chocolate 1" />
+            <rect x="85" y="103" width="28" height="28" fill="transparent" onclick="showReason(2)" role="button" tabindex="0" aria-label="Chocolate 2" />
+            <rect x="172" y="102" width="27" height="28" fill="transparent" onclick="showReason(3)" role="button" tabindex="0" aria-label="Chocolate 3" />
+            <rect x="205" y="102" width="28" height="28" fill="transparent" onclick="showReason(4)" role="button" tabindex="0" aria-label="Chocolate 4" />
+          
+            <!-- Row 2 -->
+            <rect x="77" y="136" width="28" height="28" fill="transparent" onclick="showReason(5)" role="button" tabindex="0" aria-label="Chocolate 5" />
+            <rect x="111" y="136" width="28" height="28" fill="transparent" onclick="showReason(6)" role="button" tabindex="0" aria-label="Chocolate 6" />
+            <rect x="146" y="137" width="28" height="28" fill="transparent" onclick="showReason(7)" role="button" tabindex="0" aria-label="Chocolate 7" />
+            <rect x="179" y="137" width="28" height="28" fill="transparent" onclick="showReason(8)" role="button" tabindex="0" aria-label="Chocolate 8" />
+          
+            <!-- Row 3 -->
+            <rect x="128" y="170" width="28" height="28" fill="transparent" onclick="showReason(9)" role="button" tabindex="0" aria-label="Chocolate 9" />
+          </g>
+          </svg>
+          
+        <div id="hint" class="pixelify-sans-font">hint: click on the chocolates!</div>
+        <audio id="popSound" src="pictures/pop-39222.mp3" preload="auto"></audio>
+        <button id="back-btn" class="pixel-btn pixelify-sans-font" onclick="playSoundAndDo('popSound', navigateToStart)">back</button>
+        <button id="next-btn" class="pixel-btn pixelify-sans-font" onclick="playSoundAndDo('popSound', navigateToProposal)">next</button>
+        
+    </div>
+    <div id="speech-bubble-container">
+      <audio id="typingSound" src="pictures/undertaleBlip1.mp3" preload="auto"></audio>
+        <div class="small-column"><img id="keko" src="pictures/kekoHead4.jpg"></div>
+        <div class="large-column"><div id="speech-bubble"></div></div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+/* fonts */
+
+.pixelify-sans-font {
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* colors */
+
+:root {
+  --background-pink: #D8A6A6;
+  --border-pink: #B46262;
+  --border-pink-2: #c36b6bc8;
+}
+
+/* Main container and background for whole app*/
+body {
+  background-color: var(--background-pink);
+  overflow: hidden;
+}
+#custom-frame {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full window width */
+  height: 100vh; /* Full window height */
+  border: 5px solid var(--border-pink); /* Change this to any color you like */
+  box-sizing: border-box; /* Ensures border is included in width/height */
+  z-index: 9999; /* Keeps it above everything */
+  pointer-events: none; /* Prevents the border from blocking clicks */
+}
+
+#custom-titlebar {
+  display: flex;
+  justify-content: space-between; /* Push heading left, buttons right */
+  align-items: center; /* Ensures alignment in one row */
+  width: 100%;
+  color: white;
+  padding: 5px 15px;
+  z-index: 1000;
+  position: relative;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+#myHeading {
+  font-size: 1.5rem;
+  flex-grow: 1; /* Allows the heading to take up remaining space */
+  line-height: 1; /* Makes sure text stays level */
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds '...' if text is too long */
+}
+
+.controls {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0; /* Prevents buttons from shrinking */
+  align-items: center; /* Keeps buttons aligned */
+  line-height: 1;
+  
+}
+
+.control-btns {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.control-btns:hover {
+  opacity: 0.8;
+}
+
+
+#main-container {
+  background-image: url('pictures/valBackground.png');
+  width: 396px;
+  height: 398px;
+  position: absolute;
+  left: 14px;
+  bottom:18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--border-pink-2);
+}
+
+/*startup page*/
+#keko-gift {
+  position: relative;
+  bottom: 15%;
+  left: 10%;
+}
+.pixel-btn {
+  border: 3px solid var(--border-pink-2);
+  background-color: white;
+  color: var(--border-pink-2);
+  font-weight: 600;
+  font-size: larger;
+  cursor: pointer;
+  height: 40px;
+  transition: opacity 0.6s;
+}
+.pixel-btn:hover {
+  opacity: 0.8;
+}
+#start-btn {
+  width: 90px;
+  position: relative;
+  top: 110px;
+  right: 78px;
+}
+/* reasons */
+svg rect {
+    cursor: pointer;
+    user-select: none; /* Prevents selection */
+    
+}
+#chocolate-box {
+  position: relative;
+  bottom: 90%;
+  left: 10%;
+}
+#hint {
+  position: relative;
+  top: 105px;
+  right: 80px;
+  text-wrap: nowrap;
+}
+#next-btn {
+  position: relative;
+  top: 150px;
+  right: 250px;
+}
+#back-btn {
+  position: relative;
+  top: 150px;
+  right: 260px;
+}
+#speech-bubble-container {
+    position: absolute;
+    top: 300px; /* Adjust based on your layout */
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    margin: 0;
+    padding: 10px 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+}
+#speech-bubble-container.visible {
+    display: flex;
+    gap: 10px;
+    opacity: 1;
+  }
+
+.large-column {
+    flex: 4;
+    min-width: 150px; /* Prevents it from being too small */
+    max-width: 400px; /* Keeps it from getting too wide */
+    width: auto; /* Lets it grow based on content */
+    white-space: normal; /* Allows wrapping */
+    word-wrap: break-word; /* Ensures long words don't overflow */
+    text-align: center; /* Centers text inside */
+}
+.small-column {
+    flex: 1;
+}
+#keko {
+
+    image-rendering: pixelated; /* Force sharp pixels */
+    image-rendering: crisp-edges;
+    object-fit: contain;
+}
+/*proposal page*/
+#proposal {
+  position: fixed;
+  font-size: larger;
+  bottom: 300px;
+  
+  text-wrap: nowrap;
+}
+#myYes {
+  position: fixed;
+  bottom:250px;
+  right: 220px;
+}
+#myNo {
+  position: fixed;
+  text-wrap: nowrap;
+  width: 65px;
+  bottom: 250px;
+  left: 220px;
+  z-index: 2;
+}
+#kekoSpeaking {
+  position: fixed;
+  bottom: 50px;
+  left:50px;
+}
+#back-btn-proposal {
+  position: fixed;
+  bottom: 50px;
+  left: 185px;
+}
+/* Falling Hearts Animation */
+@keyframes fall {
+    0% {
+      transform: translateY(-10%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(170%);
+      opacity: 0;
+    }
+  }
+  
+  .heart {
+    position: absolute;
+    font-size: 2em;
+    color: #ff69b4; /* Pink heart color */
+    animation: fall 5s linear infinite; /* Adjust duration as needed */
+  }
+  
+  /* Container for hearts */
+  #hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    pointer-events: none; /* Ensure hearts don’t block clicks */
+    overflow: hidden;
+  }
